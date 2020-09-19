@@ -1,0 +1,18 @@
+.actor{
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.overlay{
+  background-color: rgba($color: #000000, $alpha: 0.7);
+  position: absolute;
+width: 100%;
+height: 100%;
+top: 100%;
+left: 0;
+color: white;
+}
+.actor:hover .overlay{
+top: 0;
+transition: 0.5s;
+}
