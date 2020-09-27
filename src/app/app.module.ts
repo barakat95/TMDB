@@ -13,6 +13,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TopRatedMoviesComponent } from './top-rated-movies/top-rated-movies.component';
+import { TopRatedTvComponent } from './top-rated-tv/top-rated-tv.component';
+import { PopularMoviesComponent } from './popular-movies/popular-movies.component';
+import { PopularTvComponent } from './popular-tv/popular-tv.component';
+import { NowPlayingMoviesComponent } from './now-playing-movies/now-playing-movies.component';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+// import * as $ from 'jquery';
+
 
 @NgModule({
   declarations: [
@@ -25,12 +34,19 @@ import { ReactiveFormsModule } from '@angular/forms';
     NotFoundComponent,
     NavbarComponent,
     HomeComponent,
+    TopRatedMoviesComponent,
+    TopRatedTvComponent,
+    PopularMoviesComponent,
+    PopularTvComponent,
+    NowPlayingMoviesComponent,
+    MovieDetailsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

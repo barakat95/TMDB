@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TvService } from './tv.service';
+import { TvService } from '../services/tv.service';
 
 @Component({
   selector: 'app-tv',
@@ -7,11 +7,11 @@ import { TvService } from './tv.service';
   styleUrls: ['./tv.component.scss'],
 })
 export class TvComponent implements OnInit {
-  popularTV: any[];
+  trendingTV: any[];
   posterPath:string = 'https://image.tmdb.org/t/p/w500/';
   constructor(private tvService: TvService) {
-    tvService.getTrendingTV().subscribe((data) => {
-      this.popularTV = data.results;
+    tvService.getTrendingSeries().subscribe((data) => {
+      this.trendingTV = data.results;
     });
   }
 

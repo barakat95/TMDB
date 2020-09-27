@@ -1,7 +1,8 @@
+<h3>Popular Movies</h3>
 <div class="container-fluid">
   <div class="row">
-    <div *ngFor="let movie of trendingMovies" class="col-lg-3">
-      <div [routerLink]="['/movieDetails', movie.id]" class="movie my-2">
+    <div *ngFor="let movie of popularMovies" class="col-lg-3">
+      <div class="movie my-2">
         <img [src]="posterPath+movie.poster_path" class="img-fluid">
         <div class="overlay  p-4">
           <h3>{{movie.original_title}}</h3>

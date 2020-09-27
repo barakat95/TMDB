@@ -1,0 +1,16 @@
+<div class="container-fluid py-3 box-container">
+  <div class="row">
+    <div class="col-lg-3">
+      <img [src]="posterPath+movieDetails?.poster_path" class="img-fluid">
+    </div>
+    <div class="col-lg-8 offset-lg-1">
+      <h3>{{movieDetails?.original_title}}{{movieDetails?.name}}</h3>
+      <span *ngFor="let gen of movieDetails?.genres" class="bg-info mr-3 p-2 rounded text-white">{{gen.name}}</span>
+      <p class="mt-3">{{movieDetails?.overview}}</p>
+    </div>
+  </div>
+</div>
+
+<div class="comments-area">
+
+</div>
