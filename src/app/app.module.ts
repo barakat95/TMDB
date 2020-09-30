@@ -12,14 +12,15 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TopRatedMoviesComponent } from './top-rated-movies/top-rated-movies.component';
 import { TopRatedTvComponent } from './top-rated-tv/top-rated-tv.component';
 import { PopularMoviesComponent } from './popular-movies/popular-movies.component';
 import { PopularTvComponent } from './popular-tv/popular-tv.component';
 import { NowPlayingMoviesComponent } from './now-playing-movies/now-playing-movies.component';
-import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MediaDetailsComponent } from './media-details/media-details.component';
 // import * as $ from 'jquery';
 
 
@@ -39,7 +40,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     PopularMoviesComponent,
     PopularTvComponent,
     NowPlayingMoviesComponent,
-    MovieDetailsComponent,
+    MediaDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +48,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HttpClientModule,
     ReactiveFormsModule,
     NgbModule,
+    FormsModule,
+    BrowserAnimationsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent],

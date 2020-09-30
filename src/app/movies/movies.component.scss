@@ -11,8 +11,8 @@ height: 100%;
 top: 100%;
 left: 0;
 color: white;
+transition: 0.5s;
 }
 .movie:hover .overlay{
 top: 0;
-transition: 0.5s;
 }

@@ -1,5 +1,7 @@
-<nav class="navbar navbar-expand-lg px-5">
-  <a class="navbar-brand" routerLink="home">TMDB</a>
+<nav class="navbar navbar-expand-lg py-3">
+  <a class="navbar-brand" routerLink="home">
+    <img src="./assets/images/logo.png" class="img-fluid">
+  </a>
   <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav"
     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -18,7 +20,7 @@
         <a class="nav-link" routerLink="tv" routerLinkActive="active-link">TV</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="people" routerLinkActive="active-link">People</a>
+        <a class="nav-link" routerLink="people" routerLinkActive="active-link">Actors</a>
       </li>
       <li *ngIf="isLogin" class="nav-item">
         <a class="nav-link" routerLink="login" (click)="onLogout()">Logout</a>
@@ -26,10 +28,14 @@
       <li *ngIf="!isLogin" class="nav-item" >
         <a class="nav-link" routerLink="login" routerLinkActive="active-link">Login</a>
       </li>
-      <li *ngIf="!isLogin" class="nav-item">
+      <li *ngIf="isLogin" class="nav-item">
         <a class="nav-link" routerLink="register" routerLinkActive="active-link">Register</a>
       </li>
     </ul>
+        <form class="form-inline position-relative search-form ml-3">
+          <input class="search-input text-white form-control bg-transparent mr-sm-2 rounded-pill" placeholder="Search" aria-label="Search">
+          <i class="fa fa-search text-white position-absolute search-icon"></i>
+        </form>
     <!-- <ul *ngIf="!isLogin" class="navbar-nav ml-auto">
     </ul> -->
   </div>

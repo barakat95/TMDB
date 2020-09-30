@@ -1,13 +1,13 @@
 <div class="container-fluid">
   <div class="row">
     <div *ngFor="let tv of trendingTV" class="col-lg-3">
-      <div class="tv-item my-2">
-        <img [src]="posterPath+tv.poster_path" class="img-fluid">
+      <div [routerLink]="['/mediaDetails', tv.id]" class="tv-item my-2" >
+        <img [src]="posterPath+tv?.poster_path" class="img-fluid">
         <div class="overlay  p-4">
-          <h3>{{tv.original_name}}</h3>
-          <p>{{tv.first_air_date}}</p>
-          <p>{{tv.overview}}</p>
-          <p><i class="fa fa-star"></i> {{tv.vote_average}}</p>
+          <h3>{{tv?.original_name}}</h3>
+          <p>{{tv?.first_air_date}}</p>
+          <p>{{tv?.overview}}</p>
+          <p><i class="fa fa-star"></i> {{tv?.vote_average}}</p>
         </div>
       </div>
     </div>

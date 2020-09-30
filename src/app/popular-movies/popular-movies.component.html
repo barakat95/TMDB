@@ -1,16 +1,14 @@
-<h3>Popular Movies</h3>
 <div class="container-fluid">
+  <h2 class="section-title text-white text-center pb-5 pt-3">Popular Movies</h2>
   <div class="row">
-    <div *ngFor="let movie of popularMovies" class="col-lg-3">
-      <div class="movie my-2">
-        <img [src]="posterPath+movie.poster_path" class="img-fluid">
-        <div class="overlay  p-4">
-          <h3>{{movie.original_title}}</h3>
-          <p>{{movie.release_date}}</p>
-          <p>{{movie.overview}}</p>
-          <p><i class="fa fa-star"></i> {{movie.vote_average}}</p>
-        </div>
+    <div *ngFor="let movie of popularMovies" class="col-lg-2">
+      <div [routerLink]="['/mediaDetails', movie.id]" class="movie my-3">
+        <img [src]="posterPath+movie?.poster_path" class="img-fluid">
       </div>
+      <h3 class="movie-title text-center text-white mb-0">{{movie?.original_title}}</h3>
+      <p class="release-date text-center text-white">{{movie?.release_date}}</p>
+      <p class="text-center"><span class="vote-average text-white px-4 py-1 rounded-pill"><i
+            class="fa fa-star vote-icon"></i>&nbsp;&nbsp;{{movie?.vote_average}}</span></p>
     </div>
   </div>
 </div>

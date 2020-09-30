@@ -1,18 +1,39 @@
-.movie{
+.section-title {
+  font-size: 2.5rem;
+}
+
+.movie {
   position: relative;
   cursor: pointer;
   overflow: hidden;
+  transition: all 0.5s;
+  border-radius: 10px;
 }
-.overlay{
+
+.overlay {
   background-color: rgba($color: #000000, $alpha: 0.9);
   position: absolute;
-width: 100%;
-height: 100%;
-top: 100%;
-left: 0;
-color: white;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  left: 0;
+  color: white;
 }
-.movie:hover .overlay{
-top: 0;
-transition: 0.5s;
+.movie:hover{
+  transform: scale(0.95);
+  box-shadow: 4px 16px 25px 0px rgba(0, 0, 0, 1);
+}
+
+.movie:hover .overlay {
+  top: 0;
+  transition: 0.5s;
+}
+
+.movie-title {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.vote-average {
+  border: 1px solid white;
 }

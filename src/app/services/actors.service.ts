@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class PeopleService {
+export class ActorsService {
 
   constructor(private httpClient:HttpClient) { }
   getPopularActors():Observable<any>{

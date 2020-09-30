@@ -1,19 +1,32 @@
-.navbar{
-  background-color: black;
+.navbar {
+  background-color: #171717;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: rgb(255, 255, 255, 0.4);
+  padding: 0rem 3.3rem;
 }
-.navbar-brand{
-  font-weight: 800;
-  font-size: 2rem;
-  color: crimson
+
+.navbar-brand {
+  width: 4rem;
+  padding: 0rem 0.5rem;
 }
-.nav-link{
+
+.nav-link {
   color: white;
   font-size: 1.1rem;
   font-weight: 400;
+  margin: 0px 10px;
 }
-.nav-link:hover{
-  color: crimson;
+
+.nav-link:hover {
+  color: #CE1632;
 }
-.active-link{
-  color: crimson !important;
+
+.active-link {
+  color: #CE1632 !important;
+}
+
+.search-icon {
+  right: 25px;
+  cursor: pointer;
 }

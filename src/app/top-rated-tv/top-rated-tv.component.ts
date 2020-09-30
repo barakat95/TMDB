@@ -12,7 +12,7 @@ export class TopRatedTvComponent implements OnInit {
   posterPath: string = 'https://image.tmdb.org/t/p/w500/';
   constructor(private tvService: TvService) {
     tvService.getTvSeries('top_rated').subscribe((response) => {
-      this.topRatedTv = response.results;
+      this.topRatedTv = response.results.splice(0,10);
     });
   }
 

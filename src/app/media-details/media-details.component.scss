@@ -1,0 +1,53 @@
+.movie-details {
+  background-color: #171717;
+  box-shadow: 4px 16px 25px 10px rgba(0, 0, 0, 1);
+  color: white;
+  min-height: 60vh;
+  margin-top: 6rem;
+  position: relative;
+  right: 20%;
+}
+
+.media-poster {
+  width: 60% !important;
+  position: relative;
+  left: 40%;
+  top: 3rem;
+  z-index: 9999;
+}
+
+.media-title {
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+}
+
+.release-date {
+  margin-bottom: 2rem;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+}
+
+.vote-average {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.genres {
+  font-family: "Segeo", sans-serif;
+}
+
+.movie-background {
+  background-color: #CE1632 !important;
+}
+
+.tv-background {
+  background-color: #f78c1f;
+}
+
+.overview {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.8;
+  text-align: justify;
+}

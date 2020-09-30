@@ -8,10 +8,16 @@ import { MoviesService } from '../services/movies.service';
 })
 export class PopularMoviesComponent implements OnInit {
   popularMovies: any[];
-  posterPath:string = 'https://image.tmdb.org/t/p/w500/';
+  // stars: any[];
+  posterPath: string = 'https://image.tmdb.org/t/p/w500/';
   constructor(private moviesService: MoviesService) {
     moviesService.getMovies('popular').subscribe((response) => {
-      this.popularMovies = response.results;
+      this.popularMovies = response.results.splice(0, 6);
+      // for (let i = 0; i < this.popularMovies.length; i++) {
+      //   this.stars = response.results[i].vote_average;
+      //   console.log(this.stars);
+      // }
+      // console.log(response.results[1].vote_average);
     });
   }
 

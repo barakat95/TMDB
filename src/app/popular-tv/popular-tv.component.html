@@ -1,14 +1,14 @@
-<h3>Popular TV</h3>
 <div class="container-fluid">
+  <h2 class="section-title text-white text-center pb-5 pt-3">Popular <span class="pr-3">TV</span></h2>
   <div class="row">
-    <div *ngFor="let tvShow of popularTv" class="col-lg-3">
-      <div class="movie my-2">
-        <img [src]="posterPath+tvShow.poster_path" class="img-fluid">
-        <div class="overlay  p-4">
-          <h3>{{tvShow.original_title}}</h3>
-          <p>{{tvShow.release_date}}</p>
-          <p>{{tvShow.overview}}</p>
-          <p><i class="fa fa-star"></i> {{tvShow.vote_average}}</p>
+    <div *ngFor="let tvShow of popularTv" class="col-lg-2">
+      <div [routerLink]="['/mediaDetails', tvShow?.id]" class="movie my-2">
+        <img [src]="posterPath+tvShow?.poster_path" class="img-fluid">
+        <div class="overlay p-3">
+          <p class="release-date">{{tvShow?.first_air_date}}</p>
+          <!-- <span *ngFor="let country of countries">{{tvShow?.origin_country.country}}</span> -->
+          <h3 class="tvshow-name text-center">{{tvShow?.name}}</h3>
+          <span class="vote-average"><i class="fa fa-star"></i> {{tvShow?.vote_average}}</span>
         </div>
       </div>
     </div>

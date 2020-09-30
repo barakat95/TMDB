@@ -11,7 +11,7 @@ export class PopularTvComponent implements OnInit {
   posterPath:string = 'https://image.tmdb.org/t/p/w500/';
   constructor(private tvService: TvService) {
     tvService.getTvSeries('popular').subscribe((response) => {
-      this.popularTv = response.results;
+      this.popularTv = response.results.splice(0,6);
     });
   }
 

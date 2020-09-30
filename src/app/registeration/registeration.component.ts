@@ -9,42 +9,47 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./registeration.component.scss'],
 })
 export class RegisterationComponent implements OnInit {
-    flag: boolean = false;
-    constructor(private authService: AuthService, private router: Router) {}
+  flag: boolean = false;
+  constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit(): void {}
 
   registerForm: FormGroup = new FormGroup({
-    firstName: new FormControl(null, [
+    'first_name': new FormControl(null, [
       Validators.required,
       Validators.minLength(3),
       Validators.maxLength(15),
       Validators.pattern(/^[A-Z]/),
     ]),
-    lastName: new FormControl(null, [
+    'last_name': new FormControl(null, [
       Validators.required,
       Validators.minLength(3),
       Validators.maxLength(15),
       Validators.pattern(/^[A-Z]/),
     ]),
-    email: new FormControl(null, [Validators.required, Validators.email]),
-    password: new FormControl(null, [
+    'email': new FormControl(null, [Validators.required, Validators.email]),
+    'password': new FormControl(null, [
       Validators.required,
       Validators.minLength(6),
     ]),
+
+    // userId: new FormControl(null),
+    // id: new FormControl(null),
+    // title: new FormControl(null),
+    // body: new FormControl(null),
   });
 
   getRegisterForm(registerForm) {
-    console.log(registerForm.value);
+    // console.log(registerForm.value);
 
     if (registerForm.valid == true) {
       this.authService.onRegister(registerForm.value).subscribe((response) => {
         console.log(response);
         if (response.message == 'success') {
-              this.router.navigate(['/login']);
-            } else {
-              this.flag = true;
-            }
+          this.router.navigate(['/login']);
+        } else {
+          this.flag = true;
+        }
       });
     }
   }

@@ -3,12 +3,12 @@
   <div class="row">
     <div *ngFor="let movie of nowPlayingMovies" class="col-lg-3">
       <div class="movie my-2">
-        <img [src]="posterPath+movie.poster_path" class="img-fluid">
+        <img [src]="posterPath+movie?.poster_path" class="img-fluid">
         <div class="overlay  p-4">
-          <h3>{{movie.original_title}}</h3>
-          <p>{{movie.release_date}}</p>
-          <p>{{movie.overview}}</p>
-          <p><i class="fa fa-star"></i> {{movie.vote_average}}</p>
+          <h3>{{movie?.original_title}}</h3>
+          <p>{{movie?.release_date}}</p>
+          <p>{{movie?.overview}}</p>
+          <p><i class="fa fa-star"></i>{{movie?.vote_average}}</p>
         </div>
       </div>
     </div>

@@ -1,14 +1,12 @@
-<h3>Top Rated TV</h3>
 <div class="container-fluid">
+  <h2 class="section-title text-white pt-3 pb-5 text-center">Top Rated <span class="pr-3">TV</span></h2>
   <div class="row">
-    <div *ngFor="let tvShow of topRatedTv" class="col-lg-3">
-      <div class="movie my-2">
-        <img [src]="posterPath+tvShow.poster_path" class="img-fluid">
-        <div class="overlay  p-4">
-          <h3>{{tvShow.original_title}}{{tvShow.name}}</h3>
-          <p>{{tvShow.release_date}}</p>
-          <p>{{tvShow.overview}}</p>
-          <p><i class="fa fa-star"></i> {{tvShow.vote_average}}</p>
+    <div *ngFor="let tvShow of topRatedTv" class=" m-auto" style="width: 18%;">
+      <div [routerLink]="['/mediaDetails', tvShow?.id]" class="movie mb-5 mt-2">
+        <img [src]="posterPath+tvShow?.poster_path" class="img-fluid">
+        <div class="overlay d-flex flex-column justify-content-end text-center p-4">
+          <h3 class="movie-title">{{tvShow?.original_title}}{{tvShow?.name}}</h3>
+          <p><i class="fa fa-star"></i> {{tvShow?.vote_average}}</p>
         </div>
       </div>
     </div>

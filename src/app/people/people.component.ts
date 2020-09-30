@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PeopleService } from './people.service';
+import { ActorsService } from '../services/actors.service';
 
 @Component({
   selector: 'app-people',
@@ -9,8 +9,8 @@ import { PeopleService } from './people.service';
 export class PeopleComponent implements OnInit {
   popularActors: any[];
   posterPath:string = 'https://image.tmdb.org/t/p/w500/';
-  constructor(private peopleService: PeopleService) {
-    peopleService.getPopularActors().subscribe((data) => {
+  constructor(private actorsService: ActorsService) {
+    actorsService.getPopularActors().subscribe((data) => {
       this.popularActors = data.results;
     });
   }
