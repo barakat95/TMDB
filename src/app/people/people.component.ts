@@ -11,7 +11,7 @@ export class PeopleComponent implements OnInit {
   posterPath:string = 'https://image.tmdb.org/t/p/w500/';
   constructor(private actorsService: ActorsService) {
     actorsService.getPopularActors().subscribe((data) => {
-      this.popularActors = data.results;
+      this.popularActors = data.results.splice(0,6);
     });
   }
 

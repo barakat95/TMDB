@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 
 @Component({
@@ -7,21 +8,21 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
-  isLogin:boolean = false;
-  constructor(private authService:AuthService) {
-    this.authService.currentUser.subscribe((response)=>{
+  isLogin: boolean = false;
+  page: number;
+  constructor(private authService: AuthService, private route: ActivatedRoute) {
+    this.authService.currentUser.subscribe((response) => {
       if (response == null) {
         this.isLogin = false;
-      }else{
+      } else {
         this.isLogin = true;
       }
-    })
+    });
   }
 
   ngOnInit(): void {}
 
-  onLogout(){
+  onLogout() {
     this.authService.onLogout();
   }
-
 }

@@ -1,13 +1,18 @@
-<div class="container-fluid">
+<div class="container-fluid px-5 py-5">
+  <h2 class="section-title text-white text-center pb-5 pt-3">Acto<span>rs</span></h2>
   <div class="row">
-    <div *ngFor="let actor of popularActors" class="col-lg-3">
+    <div *ngFor="let actor of popularActors" class="col-lg-2">
       <div class="actor my-2">
         <img [src]="posterPath+actor?.profile_path" class="img-fluid">
-        <div class="overlay  p-4">
-          <h3>{{actor?.name}}</h3>
-          <p>{{actor?.known_for_department}}</p>
+        <div class="overlay p-4">
+          <h3 class="actor-name text-center">{{actor?.name}}</h3>
+          <p class="department px-2 py-1">{{actor?.known_for_department}}</p>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+<div class="person-details py-5">
+  <app-people-details></app-people-details>
 </div>

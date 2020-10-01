@@ -15,7 +15,7 @@ export class TopRatedMoviesComponent implements OnInit {
     private moviesService: MoviesService,
     private mediaDetailsService: MediaDetailsService
   ) {
-    moviesService.getMovies('top_rated').subscribe((response) => {
+    moviesService.getMovies('top_rated',1).subscribe((response) => {
       this.topRatedMovies = response.results.splice(0, 8);
     });
   }

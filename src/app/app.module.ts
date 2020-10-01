@@ -21,6 +21,7 @@ import { NowPlayingMoviesComponent } from './now-playing-movies/now-playing-movi
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MediaDetailsComponent } from './media-details/media-details.component';
+import { PeopleDetailsComponent } from './people/people-details/people-details.component';
 // import * as $ from 'jquery';
 
 
@@ -41,6 +42,7 @@ import { MediaDetailsComponent } from './media-details/media-details.component';
     PopularTvComponent,
     NowPlayingMoviesComponent,
     MediaDetailsComponent,
+    PeopleDetailsComponent,
   ],
   imports: [
     BrowserModule,

@@ -7,12 +7,12 @@ import { MoviesService } from '../services/movies.service';
   styleUrls: ['./popular-movies.component.scss'],
 })
 export class PopularMoviesComponent implements OnInit {
-  popularMovies: any[];
+  trendingMovies: any[];
   // stars: any[];
   posterPath: string = 'https://image.tmdb.org/t/p/w500/';
   constructor(private moviesService: MoviesService) {
-    moviesService.getMovies('popular').subscribe((response) => {
-      this.popularMovies = response.results.splice(0, 6);
+    moviesService.getTrendingMovies().subscribe((response) => {
+      this.trendingMovies = response.results.splice(0, 6);
       // for (let i = 0; i < this.popularMovies.length; i++) {
       //   this.stars = response.results[i].vote_average;
       //   console.log(this.stars);

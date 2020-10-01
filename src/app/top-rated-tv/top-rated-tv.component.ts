@@ -11,7 +11,7 @@ export class TopRatedTvComponent implements OnInit {
   results: any[];
   posterPath: string = 'https://image.tmdb.org/t/p/w500/';
   constructor(private tvService: TvService) {
-    tvService.getTvSeries('top_rated').subscribe((response) => {
+    tvService.getTvSeries('top_rated',3).subscribe((response) => {
       this.topRatedTv = response.results.splice(0,10);
     });
   }

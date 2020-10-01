@@ -9,6 +9,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class LoginComponent implements OnInit {
   flag: boolean = false;
+
   constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit(): void {}

@@ -1,7 +1,7 @@
 <div class="container-fluid">
-  <h2 class="section-title text-white text-center pb-5 pt-3">Popular Movies</h2>
+  <h2 class="section-title text-white text-center pb-5 pt-3">Trending Movies</h2>
   <div class="row">
-    <div *ngFor="let movie of popularMovies" class="col-lg-2">
+    <div *ngFor="let movie of trendingMovies" class="col-lg-2">
       <div [routerLink]="['/mediaDetails', movie.id]" class="movie my-3">
         <img [src]="posterPath+movie?.poster_path" class="img-fluid">
       </div>

@@ -1,16 +1,27 @@
-<form [formGroup]="loginForm" (ngSubmit)="getLoginForm(loginForm)" class="w-50 m-auto py-5">
-  <div class="form-group">
-    <label>E-mail</label>
-    <input [class.is-valid]="loginForm.get('email').valid" formControlName="email" type="email" class="form-control">
-    <p *ngIf="loginForm.get('email').errors && loginForm.get('email').touched" class="text-danger py-1">E-mail is
-      invalid</p>
+<div class="login">
+  <div class="container-fluid">
+    <div class="row align-items-end">
+      <form [formGroup]="loginForm" (ngSubmit)="getLoginForm(loginForm)" class="py-5 px-5 m-auto w-50">
+        <h2 class="text-white">Login to Movie <span>Night</span></h2>
+        <div class="form-group my-4">
+          <label class="text-white">E-mail</label>
+          <input [class.is-valid]="loginForm.get('email').valid" formControlName="email" type="email"
+            class="form-control">
+          <p *ngIf="loginForm.get('email').errors && loginForm.get('email').touched" class="text-danger py-1">E-mail
+            is invalid</p>
+        </div>
+        <div class="form-group my-4">
+          <label class="text-white">Password</label>
+          <input [class.is-valid]="loginForm.get('password').valid" formControlName="password" type="password"
+            class="form-control">
+          <p *ngIf="loginForm.get('password').errors && loginForm.get('password').touched" class="text-danger py-1">
+            Password is invalid</p>
+        </div>
+        <div class="btns text-center py-3">
+          <button [disabled]="loginForm.invalid" type="submit" class="btn btn-primary px-5 float-right">Login</button><br><br>
+          <a routerLink="/register" class="text-white">Don't have an account? <span class="register">Register now</span></a>
+        </div>
+      </form>
+    </div>
   </div>
-  <div class="form-group">
-    <label>Password</label>
-    <input [class.is-valid]="loginForm.get('password').valid" formControlName="password" type="password"
-      class="form-control">
-    <p *ngIf="loginForm.get('password').errors && loginForm.get('password').touched" class="text-danger py-1">
-      Password is invalid</p>
-  </div>
-  <button [disabled]="loginForm.invalid" type="submit" class="btn btn-primary">Login</button>
-</form>
+</div>

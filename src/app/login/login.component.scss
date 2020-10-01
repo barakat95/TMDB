@@ -1,0 +1,31 @@
+.login {
+  background-image: url('../../../src/assets/images/login.png');
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+}
+
+h2 {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+h2 span {
+  background-color: #CE1632;
+}
+.form-control {
+  box-shadow: 4px 16px 25px 20px rgba(0, 0, 0, 1);
+  background-color: #171717;
+  border: none;
+  // height: 50px;
+  color: white;
+}
+
+.btn {
+  background-color: #CE1632;
+  border: #CE1632 1px solid;
+}
+
+.register{
+  cursor: pointer;
+  color: #CE1632;
+}

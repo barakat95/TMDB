@@ -15,28 +15,23 @@ export class RegisterationComponent implements OnInit {
   ngOnInit(): void {}
 
   registerForm: FormGroup = new FormGroup({
-    'first_name': new FormControl(null, [
+    first_name: new FormControl(null, [
       Validators.required,
       Validators.minLength(3),
       Validators.maxLength(15),
       Validators.pattern(/^[A-Z]/),
     ]),
-    'last_name': new FormControl(null, [
+    last_name: new FormControl(null, [
       Validators.required,
       Validators.minLength(3),
       Validators.maxLength(15),
       Validators.pattern(/^[A-Z]/),
     ]),
-    'email': new FormControl(null, [Validators.required, Validators.email]),
-    'password': new FormControl(null, [
+    email: new FormControl(null, [Validators.required, Validators.email]),
+    password: new FormControl(null, [
       Validators.required,
       Validators.minLength(6),
     ]),
-
-    // userId: new FormControl(null),
-    // id: new FormControl(null),
-    // title: new FormControl(null),
-    // body: new FormControl(null),
   });
 
   getRegisterForm(registerForm) {

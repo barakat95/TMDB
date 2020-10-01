@@ -1,15 +1,18 @@
-<div class="container-fluid">
+<div class="container-fluid px-5 py-5">
+  <h2 class="section-title text-white text-center">Seri<span>es</span></h2>
   <div class="row">
     <div *ngFor="let tv of trendingTV" class="col-lg-3">
-      <div [routerLink]="['/mediaDetails', tv.id]" class="tv-item my-2" >
+      <div [routerLink]="['/mediaDetails', tv.id]" class="tv-item my-4">
         <img [src]="posterPath+tv?.poster_path" class="img-fluid">
         <div class="overlay  p-4">
-          <h3>{{tv?.original_name}}</h3>
-          <p>{{tv?.first_air_date}}</p>
-          <p>{{tv?.overview}}</p>
-          <p><i class="fa fa-star"></i> {{tv?.vote_average}}</p>
+          <h3 class="item-title">{{tv?.original_name}}</h3>
+          <p class="release-date">{{tv?.first_air_date}}</p>
+          <p class="vote-average"><i class="fa fa-star"></i> {{tv?.vote_average}}</p>
         </div>
       </div>
     </div>
   </div>
+</div>
+<div class="container mt-5">
+  <span *ngFor="let page of pagination" class="page-number p-2 mx-2 rounded text-white text-center">{{page}}</span>
 </div>

@@ -12,7 +12,7 @@ export class NowPlayingMoviesComponent implements OnInit {
     nowPlayingMovies: any[];
   posterPath: string = 'https://image.tmdb.org/t/p/w500/';
   constructor(private moviesService:MoviesService) {
-    moviesService.getMovies('now_playing').subscribe((response) => {
+    moviesService.getMovies('now_playing',1).subscribe((response) => {
       this.nowPlayingMovies = response.results;
     });
   }

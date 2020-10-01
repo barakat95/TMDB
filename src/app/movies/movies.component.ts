@@ -8,15 +8,26 @@ import { MoviesService } from '../services/movies.service';
   styleUrls: ['./movies.component.scss'],
 })
 export class MoviesComponent implements OnInit {
-  trendingMovies: any[];
+  popularMovies: any[];
+  pageNumber: number = 3;
+  totalPages: number;
+  pagination: number[] = [];
   posterPath: string = 'https://image.tmdb.org/t/p/w500/';
   constructor(
     private moviesService: MoviesService,
     private modalService: NgbModal,
-    private movieDetailsService: MediaDetailsService,
+    private movieDetailsService: MediaDetailsService
   ) {
-    moviesService.getTrendingMovies().subscribe((data) => {
-      this.trendingMovies = data.results;
+    moviesService.getMovies('popular', this.pageNumber).subscribe((data) => {
+      this.popularMovies = data.results;
+      this.pageNumber = data.page;
+      this.totalPages = data.total_pages;
+      for (let i = 1; i < data.total_pages; i++) {
+        this.pagination.push(i);
+      }
+      console.log(this.pagination);
+      // console.log(this.pageNumber);
+      // console.log(this.totalPages);
     });
   }
   ngOnInit(): void {}
