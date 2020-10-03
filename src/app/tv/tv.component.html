@@ -1,7 +1,13 @@
-<div class="container-fluid px-5 py-5">
-  <h2 class="section-title text-white text-center">Seri<span>es</span></h2>
+<div class="container-fluid px-5">
+  <div class="text-center">
+    <form class="w-25 position-relative search-form mb-4 mx-auto">
+      <input class="search-input text-white form-control bg-transparent mr-sm-2 rounded-pill" placeholder="Search"
+        aria-label="Search" [(ngModel)]="searchText" name="searchText" (ngModelChange)="search(searchText)">
+    </form>
+    <h2 class="section-title text-white text-center">Seri<span class="pr-2">es</span></h2>
+  </div>
   <div class="row">
-    <div *ngFor="let tv of trendingTV" class="col-lg-3">
+    <div *ngFor="let tv of trendingTV | filter:searchText" class="col-lg-3">
       <div [routerLink]="['/mediaDetails', tv.id]" class="tv-item my-4">
         <img [src]="posterPath+tv?.poster_path" class="img-fluid">
         <div class="overlay  p-4">
@@ -13,6 +19,7 @@
     </div>
   </div>
 </div>
-<div class="container mt-5">
-  <span *ngFor="let page of pagination" class="page-number p-2 mx-2 rounded text-white text-center">{{page}}</span>
+<div class="container my-5 text-center">
+  <a *ngFor="let page of pagination" class="page-number p-2 mx-2 rounded text-white text-center"
+    (click)="onPageNumber(page)">{{page}}</a>
 </div>

@@ -20,12 +20,21 @@ h2 span {
   color: white;
 }
 
+.btns a{
+  text-decoration: none;
+}
 .btn {
   background-color: #CE1632;
   border: #CE1632 1px solid;
 }
-
 .register{
   cursor: pointer;
   color: #CE1632;
 }
+.register:hover{
+  text-decoration: underline;
+}
+// .register{
+//   cursor: pointer;
+//   color: #CE1632;
+// }

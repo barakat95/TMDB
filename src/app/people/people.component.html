@@ -1,7 +1,9 @@
 <div class="container-fluid px-5 py-5">
-  <h2 class="section-title text-white text-center pb-5 pt-3">Acto<span>rs</span></h2>
-  <div class="row">
-    <div *ngFor="let actor of popularActors" class="col-lg-2">
+  <h2 class="section-title text-white text-center pb-5 pt-3">Acto<span class="pr-2">rs</span></h2>
+  <div class="row px-4">
+    <!-- (click)="getActorDetails(id)" -->
+    <div *ngFor="let actor of popularActors" class="col-lg-2" (click)="onActor(actor)">
+      <!-- [actorDetails]= "actor" -->
       <div class="actor my-2">
         <img [src]="posterPath+actor?.profile_path" class="img-fluid">
         <div class="overlay p-4">
@@ -12,7 +14,11 @@
     </div>
   </div>
 </div>
+<div class="container my-2 text-center">
+  <a *ngFor="let page of pagination" class="page-number p-2 mx-2 rounded text-white text-center"
+    (click)="onPageNumber(page)">{{page}}</a>
+</div>
 
-<div class="person-details py-5">
+<div class="person-details py-5 px-4 mt-5" *ngIf="actorClick">
   <app-people-details></app-people-details>
 </div>

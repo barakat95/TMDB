@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
+import { SearchService } from '../services/search.service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,7 +11,12 @@ import { AuthService } from '../services/auth.service';
 export class NavbarComponent implements OnInit {
   isLogin: boolean = false;
   page: number;
-  constructor(private authService: AuthService, private route: ActivatedRoute) {
+  loginClicked = false;
+
+  constructor(
+    private authService: AuthService,
+    private searchService: SearchService
+  ) {
     this.authService.currentUser.subscribe((response) => {
       if (response == null) {
         this.isLogin = false;
@@ -20,9 +26,27 @@ export class NavbarComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.authService.isloginPage.subscribe(isLoginPage => {
+      this.loginClicked = isLoginPage;
+    })
+  }
 
   onLogout() {
     this.authService.onLogout();
   }
+  searchText: any;
+  data: any[] = [];
+  search(searchText) {
+    this.searchService.search(searchText).subscribe((response) => {
+      this.data = response.results;
+      console.log(this.data);
+    });
+  }
+
+  onLogin() {
+    this.loginClicked = true;
+  }
+
+
 }

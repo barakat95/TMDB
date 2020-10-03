@@ -1,0 +1,54 @@
+.img-item {
+  border-radius: 10px;
+}
+.actor-img{
+  position: relative;
+  z-index: 99999;
+  box-shadow: 4px 16px 25px 0px rgba(0, 0, 0, 1);
+}
+.bg{
+  background-color: #09c;
+  position: absolute;
+  height: 60%;
+  width: 150%;
+  left: 50%;
+  top: 50%;
+  z-index: -1;
+}
+
+.actor-name {
+  font-size: 25px;
+  font-weight: 500;
+  color: white;
+}
+
+.department {
+  color: white;
+  font-size: 20px;
+}
+
+.movie-title {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.movie-overview {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+  padding-top: 10px;
+}
+
+span{
+  background-color: #09c;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+* {
+  color: white;
+}

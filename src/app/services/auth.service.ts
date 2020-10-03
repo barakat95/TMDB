@@ -2,14 +2,15 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { User } from '../model/user';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  currentUser = new BehaviorSubject(null);
+  currentUser = new BehaviorSubject<User>(null);
+  isloginPage = new Subject<boolean>();
   constructor(private httpClient: HttpClient, private router:Router) {
     if (localStorage.getItem('user') != null) {
       this.currentUser.next(JSON.parse(localStorage.getItem('user')));

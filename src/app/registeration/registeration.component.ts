@@ -12,7 +12,8 @@ export class RegisterationComponent implements OnInit {
   flag: boolean = false;
   constructor(private authService: AuthService, private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
   registerForm: FormGroup = new FormGroup({
     first_name: new FormControl(null, [

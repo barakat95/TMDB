@@ -8,34 +8,39 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <!-- *ngIf="isLogin" -->
-    <ul  class="navbar-nav ml-auto">
-      <li class="nav-item">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item" *ngIf="!loginClicked">
         <a class="nav-link" routerLink="home" routerLinkActive="active-link">Home <span
             class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" *ngIf="!loginClicked">
         <a class="nav-link" routerLink="movies" routerLinkActive="active-link">Movies</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" *ngIf="!loginClicked">
         <a class="nav-link" routerLink="tv" routerLinkActive="active-link">TV</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" *ngIf="!loginClicked">
         <a class="nav-link" routerLink="people" routerLinkActive="active-link">Actors</a>
       </li>
       <li *ngIf="isLogin" class="nav-item">
         <a class="nav-link" routerLink="login" (click)="onLogout()">Logout</a>
       </li>
-      <li *ngIf="!isLogin" class="nav-item" >
-        <a class="nav-link" routerLink="login" routerLinkActive="active-link">Login</a>
+      <li *ngIf="!isLogin && !loginClicked" class="nav-item">
+        <a class="nav-link" routerLink="login" routerLinkActive="active-link" (click)="onLogin()">Login</a>
       </li>
-      <li *ngIf="isLogin" class="nav-item">
+      <!-- <a *ngIf="!loginClicked" routerLink="/register" class="before-register text-white">Don't have an account? <span
+          class="register pl-2">Register now</span></a> -->
+      <!-- <a *ngIf="!loginClicked" routerLink="/login" class="text-white">Already have an account? <span class="login">Login
+          now</span></a> -->
+      <!-- <li *ngIf="!isLogin" class="nav-item">
         <a class="nav-link" routerLink="register" routerLinkActive="active-link">Register</a>
-      </li>
+      </li> -->
     </ul>
-        <form class="form-inline position-relative search-form ml-3">
-          <input class="search-input text-white form-control bg-transparent mr-sm-2 rounded-pill" placeholder="Search" aria-label="Search">
-          <i class="fa fa-search text-white position-absolute search-icon"></i>
-        </form>
+    <!-- <form class="form-inline position-relative search-form ml-3" *ngIf="!loginClicked">
+      <input class="search-input text-white form-control bg-transparent mr-sm-2 rounded-pill" placeholder="Search"
+        aria-label="Search" [(ngModel)]="searchText" name="searchText" (ngModelChange)="search(searchText)">
+      <i class="fa fa-search text-white position-absolute search-icon" ></i>
+    </form> -->
     <!-- <ul *ngIf="!isLogin" class="navbar-nav ml-auto">
     </ul> -->
   </div>

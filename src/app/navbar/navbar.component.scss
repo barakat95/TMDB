@@ -1,10 +1,14 @@
 .navbar {
-  background-color: #171717;
-  border-bottom: solid;
-  border-width: 1px;
-  border-color: rgb(255, 255, 255, 0.4);
+  background-color: #171717 !important;
+  // border-bottom: solid;
+  // border-width: 1px;
+  // border-color: rgb(255, 255, 255, 0.4);
   padding: 0rem 3.3rem;
 }
+// .navbar.scrolled {
+//   background-color: #fff !important;
+//   transition: background-color 200ms linear;
+// }
 
 .navbar-brand {
   width: 4rem;
@@ -26,7 +30,33 @@
   color: #CE1632 !important;
 }
 
-.search-icon {
-  right: 25px;
-  cursor: pointer;
+// .search-icon {
+//   right: 25px;
+//   cursor: pointer;
+// }
+.before-register:hover{
+  text-decoration: none;
+  cursor: auto;
 }
+.register{
+  cursor: pointer;
+  color: #CE1632;
+}
+.register:hover{
+  text-decoration: underline;
+}
+
+
+// .smart-scroll{
+//   position: fixed;
+//   top: 0;
+//   right: 0;
+//   left: 0;
+//   z-index: 1030;
+// }
+// .scrolled-down{
+//    transform:translateY(-100%); transition: all 0.3s ease-in-out;
+// }
+// .scrolled-up{
+//    transform:translateY(0); transition: all 0.3s ease-in-out;
+// }

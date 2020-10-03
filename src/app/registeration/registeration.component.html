@@ -44,11 +44,11 @@
               class="text-danger py-1">
               Password is invalid</p>
           </div>
-          <div class="btns text-center py-3">
+          <div class="btns text-center py-3 d-flex align-items-center justify-content-end">
+            <a routerLink="/login" class="text-white">Already have an account? <span class="login pl-1">Login
+              now</span></a>
             <button [disabled]="registerForm.invalid" type="submit"
-              class="btn btn-primary px-5 float-right">Register</button><br><br>
-            <a routerLink="/login" class="text-white">Already have an account? <span class="login">Login
-                now</span></a>
+              class="btn btn-primary px-5 float-right ml-3">Register</button><br><br>
           </div>
         </form>
       </div>

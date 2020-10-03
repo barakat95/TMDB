@@ -22,6 +22,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MediaDetailsComponent } from './media-details/media-details.component';
 import { PeopleDetailsComponent } from './people/people-details/people-details.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { HomeSliderComponent } from './home-slider/home-slider.component';
+import { NgImageSliderModule } from 'ng-image-slider';
+import { SliderModule } from 'angular-image-slider';
+
 // import * as $ from 'jquery';
 
 
@@ -43,6 +48,8 @@ import { PeopleDetailsComponent } from './people/people-details/people-details.c
     NowPlayingMoviesComponent,
     MediaDetailsComponent,
     PeopleDetailsComponent,
+    HomeSliderComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -52,7 +59,10 @@ import { PeopleDetailsComponent } from './people/people-details/people-details.c
     NgbModule,
     FormsModule,
     BrowserAnimationsModule,
-
+    Ng2SearchPipeModule,
+    BrowserAnimationsModule,
+     SliderModule,
+     NgImageSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent],

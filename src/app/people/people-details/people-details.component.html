@@ -1,18 +1,37 @@
-<div class="container">
+<div class="container-fluid px-5">
   <div class="row">
-    <div class="col-lg-3">
-      <h4></h4>
-      <span>Actor</span>
-    </div>
-    <div class="col-lg-3">
+    <div class="col-lg-4">
       <div class="row">
-        <div class="col-lg-3">
-          <img src="" alt="">
+        <div class="col-lg-6">
+          <div class="actor-img">
+            <img [src]="posterPath+actor?.profile_path" class="img-fluid img-item">
+            <div class="bg"></div>
+          </div>
         </div>
-        <div class="col-lg-9">
-          <h4>Name</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur sit dolores accusamus placeat id saepe
-            iure! Aperiam iste pariatur porro?</p>
+        <div class="col-lg-6">
+          <div class="actor-details mt-4">
+            <h4 class="actor-name">{{ actor?.name }}</h4>
+            <p class="department">{{actor?.known_for_department}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8" >
+      <div class="movies pb-5" *ngFor="let item of knownFor; let i = index;">
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <div class="movie-poster w-100">
+              <img [src]="posterPath+knownFor[i]?.backdrop_path" class="img-item w-75 float-right">
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <h4 class="movie-title">{{ knownFor[i]?.title }}{{knownFor[i].name}}</h4>
+            <p>{{knownFor[i]?.first_air_date}}{{knownFor[i]?.release_date}}</p>
+            <p class="movie-overview">{{ knownFor[i]?.overview }}</p>
+            <span>{{knownFor[i]?.original_language | uppercase }}</span>
+            <span>{{knownFor[i]?.media_type| uppercase }}</span>
+            <span><i class="fa fa-star"></i>&nbsp; {{knownFor[i]?.vote_average}}</span>
+          </div>
         </div>
       </div>
     </div>

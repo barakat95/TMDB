@@ -1,4 +1,4 @@
-.form{
+.form {
   background-color: #171717;
   box-shadow: 4px 16px 25px 20px rgba(0, 0, 0, 1);
   border-radius: 10px;
@@ -10,13 +10,16 @@ h2 {
   font-size: 1.5rem;
   letter-spacing: 2px;
 }
+
 h2 span {
   background-color: #CE1632;
 }
-label{
+
+label {
   color: white;
 }
-.register-img{
+
+.register-img {
   // position: relative;
   border-radius: 10px;
   transform: translateX(10%);
@@ -24,11 +27,15 @@ label{
 
 .form-control {
   // box-shadow: 4px 16px 25px 0px rgba(0, 0, 0, 1);
-  box-shadow: inset 0px 0px 15px 2px rgba(0,0,0,20);
+  box-shadow: inset 0px 0px 15px 2px rgba(0, 0, 0, 20);
   background-color: #171717;
   border: none;
   // height: 50px;
   color: white;
+}
+
+.btns a {
+  text-decoration: none;
 }
 
 .btn {
@@ -36,7 +43,11 @@ label{
   border: #CE1632 1px solid;
 }
 
-.login{
+.login {
   cursor: pointer;
   color: #CE1632;
+}
+
+.login:hover {
+  text-decoration: underline;
 }
