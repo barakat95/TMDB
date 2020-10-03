@@ -1,8 +1,6 @@
 # movie-project-prod v1.0
 Live Website: https://barakat95.github.io/movie-project-prod/#/
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.
-
 # Website description
 
 The Movies Data Base is my Angular project displaying in the home component Now-Playing movies in cinemas
