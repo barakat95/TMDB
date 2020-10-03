@@ -1,5 +1,5 @@
 # movie-project-prod v1.0
-Live Website: https://barakat95.github.io/movie-project-prod/#/
+Live Website: https://barakat95.github.io/movie-project-prod/
 
 # Website description
 
