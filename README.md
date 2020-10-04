@@ -1,5 +1,25 @@
-# Task1
+# movie-project-prod v1.0
+Live Website: https://barakat95.github.io/movie-project-prod/
 
+# Website description
+
+The Movies Data Base is my Angular project displaying in the home component Now-Playing movies in cinemas
+
+# Project technical description
+
+This project is dealing with the most Angular features and concepts:
+- Dealing with angular components to make every thing in project is stand alone thing.
+- Dealing with angular routing to navigate to destination path and components.
+- Dealing with endpoint apis to fetch and post data.
+- Dealing with angular services to get, post and share data from, to api endpoint and between different components.
+- Dealing with angular pipes like filter to handle search in project
+- Dealing with angular directives.
+- Dealing with rxjs library.
+- Dealing with angular reactive forms to create the login and register forms.
+- Dealing with authentication in forms with validation on each element before sending data to backend.
+- Dealing with local storage to save the logged in user data for the next visit.
+
+# movie-project-prod v1.0
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
 
 ## Development server
