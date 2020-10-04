@@ -1,14 +1,14 @@
 <div class="container-fluid px-5">
   <div class="text-center">
-    <form class="w-25 position-relative search-form mb-4 mx-auto" >
+    <form class="position-relative search-form mb-4 mx-auto">
       <input class="search-input text-white form-control bg-transparent mr-sm-2 rounded-pill" placeholder="Search"
-      aria-label="Search" [(ngModel)]="searchText" name="searchText" (ngModelChange)="search(searchText)">
+        aria-label="Search" [(ngModel)]="searchText" name="searchText" (ngModelChange)="search(searchText)">
     </form>
     <h2 class="section-title text-white text-center">Movi<span class="pr-2">es</span></h2>
   </div>
   <div class="row">
     <div *ngFor="let movie of popularMovies | filter:searchText" class="col-lg-3">
-      <div [routerLink]="['/mediaDetails', movie.id]"  class="movie my-4">
+      <div [routerLink]="['/mediaDetails', movie.id]" class="movie my-4">
         <img [src]="posterPath+movie?.poster_path" class="img-fluid">
         <div class="overlay p-4">
           <h3 class="movie-title">{{movie?.original_title}}</h3>
@@ -18,11 +18,8 @@
       </div>
     </div>
   </div>
-  <div class="container my-5 text-center">
-    <span *ngFor="let page of pagination"
-          class="page-number p-2 mx-2 rounded text-white text-center"
-          (click)="onPageNumber(page)"
-          >{{page}}</span>
-  </div>
 </div>
-
+<div class="container-fluid my-5 text-center">
+  <span *ngFor="let page of pagination" class="page-number p-2 mx-2 my-2 rounded text-white text-center"
+    (click)="onPageNumber(page)">{{page}}</span>
+</div>

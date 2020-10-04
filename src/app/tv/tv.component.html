@@ -1,6 +1,6 @@
 <div class="container-fluid px-5">
   <div class="text-center">
-    <form class="w-25 position-relative search-form mb-4 mx-auto">
+    <form class="position-relative search-form mb-4 mx-auto">
       <input class="search-input text-white form-control bg-transparent mr-sm-2 rounded-pill" placeholder="Search"
         aria-label="Search" [(ngModel)]="searchText" name="searchText" (ngModelChange)="search(searchText)">
     </form>
@@ -20,6 +20,6 @@
   </div>
 </div>
 <div class="container my-5 text-center">
-  <a *ngFor="let page of pagination" class="page-number p-2 mx-2 rounded text-white text-center"
+  <a *ngFor="let page of pagination" class="page-number p-2 mx-2 my-2 rounded text-white text-center"
     (click)="onPageNumber(page)">{{page}}</a>
 </div>

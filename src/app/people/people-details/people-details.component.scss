@@ -1,5 +1,6 @@
 .img-item {
   border-radius: 10px;
+  width: 75%;
 }
 .actor-img{
   position: relative;
@@ -21,6 +22,20 @@
   font-weight: 500;
   color: white;
 }
+@media screen and (max-width:767px){
+  .actor-name{
+    margin-top: 30px;
+    text-align: center;
+  }
+  .department{
+    text-align: center;
+  }
+.img-item{
+  width: 100%;
+  margin-bottom: 20px;
+}
+}
+
 
 .department {
   color: white;

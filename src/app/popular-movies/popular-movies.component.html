@@ -2,13 +2,15 @@
   <h2 class="section-title text-white text-center pb-5 pt-3">Trending Movies</h2>
   <div class="row">
     <div *ngFor="let movie of trendingMovies" class="col-lg-2">
-      <div [routerLink]="['/mediaDetails', movie.id]" class="movie my-3">
-        <img [src]="posterPath+movie?.poster_path" class="img-fluid">
+        <div [routerLink]="['/mediaDetails', movie.id]" class="movie my-3">
+          <img [src]="posterPath+movie?.poster_path" class="img-fluid">
+        </div>
+        <div class="movie-details">
+          <h3 class="movie-title text-center text-white mb-0">{{movie?.original_title}}</h3>
+          <p class="release-date text-center text-white">{{movie?.release_date}}</p>
+          <p class="text-center"><span class="vote-average text-white px-4 py-1 rounded-pill"><i
+                class="fa fa-star vote-icon"></i>&nbsp;&nbsp;{{movie?.vote_average}}</span></p>
+        </div>
       </div>
-      <h3 class="movie-title text-center text-white mb-0">{{movie?.original_title}}</h3>
-      <p class="release-date text-center text-white">{{movie?.release_date}}</p>
-      <p class="text-center"><span class="vote-average text-white px-4 py-1 rounded-pill"><i
-            class="fa fa-star vote-icon"></i>&nbsp;&nbsp;{{movie?.vote_average}}</span></p>
-    </div>
   </div>
 </div>

@@ -61,6 +61,15 @@
   background-color: #CE1632;
 }
 
+.search-form{
+  width: 25%;
+}
+
+@media screen and (max-width:767px){
+  .search-form{
+    width: 100%;
+  }
+}
 // .search-icon {
 //   right: 20px;
 //   top: 12px;

@@ -2,7 +2,6 @@
   background-color: #171717;
   box-shadow: 4px 16px 25px 20px rgba(0, 0, 0, 1);
   border-radius: 10px;
-  // position: relative;
   transform: translateX(-15%);
 }
 
@@ -20,17 +19,14 @@ label {
 }
 
 .register-img {
-  // position: relative;
   border-radius: 10px;
   transform: translateX(10%);
 }
 
 .form-control {
-  // box-shadow: 4px 16px 25px 0px rgba(0, 0, 0, 1);
   box-shadow: inset 0px 0px 15px 2px rgba(0, 0, 0, 20);
   background-color: #171717;
   border: none;
-  // height: 50px;
   color: white;
 }
 
@@ -50,4 +46,23 @@ label {
 
 .login:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width:992px){
+  .register-img img{
+    display: none !important;
+  }
+  .form{
+    transform: translateX(15%);
+    transform: translateY(-10%);
+  }
+  .btns{
+    display: block !important;
+    text-align: center;
+  }
+  .btn{
+    width: 100%;
+    float: none !important;
+    margin: 10px 0px !important;
+  }
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NotFoundService } from './services/not-found.service';
 
 @Component({
   selector: 'app-root',

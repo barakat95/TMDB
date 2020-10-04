@@ -1,11 +1,11 @@
 <div class="container py-3 box-container">
   <div class="row justify-content-center">
-    <div class="col-lg-5">
+    <div class="col-lg-5 col-md-12 text-md-center">
       <img [src]="posterPath+mediaDetails?.poster_path" class="media-poster">
     </div>
-    <div class="col-lg-7">
-      <div class="movie-details p-5 d-flex align-items-center">
-        <div class="movie-details-content px-5 ml-5">
+    <div class="col-lg-7 col-md-12 m-lg-auto">
+      <div class="movie-details p-lg-5 d-flex align-items-center">
+        <div class="movie-details-content px-5 ml-lg-5">
           <h3 class="media-title">{{mediaDetails?.original_title}}{{mediaDetails?.name}}</h3>
           <h3 class="release-date">Release date: {{mediaDetails?.release_date}}</h3>
           <p class="overview mt-3 mb-5">{{mediaDetails?.overview}}</p>

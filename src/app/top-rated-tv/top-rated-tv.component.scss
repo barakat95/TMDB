@@ -32,3 +32,17 @@
 opacity:1;
 }
 
+.fixed-width{
+  width: 18%;
+}
+
+@media all and (min-width:768px) and (max-width:992px){
+  .fixed-width{
+    width: 50%;
+  }
+}
+@media all and (max-width:767px){
+  .fixed-width{
+    width: 100%;
+  }
+}

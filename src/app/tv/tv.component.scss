@@ -60,3 +60,13 @@
 .page-number:hover {
   background-color: #f78c1f;
 }
+
+.search-form{
+  width: 25%;
+}
+
+@media screen and (max-width:767px){
+  .search-form{
+    width: 100%;
+  }
+}

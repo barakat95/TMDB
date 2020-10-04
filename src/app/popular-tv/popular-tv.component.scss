@@ -50,3 +50,9 @@
 .release-date{
   color: #f78c1f;
 }
+
+@media screen and (max-width:992px){
+  .movie{
+    margin-bottom: 40px !important;
+  }
+}

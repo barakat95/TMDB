@@ -12,6 +12,7 @@ export class NavbarComponent implements OnInit {
   isLogin: boolean = false;
   page: number;
   loginClicked = false;
+  public isCollapsed = true;
 
   constructor(
     private authService: AuthService,
