@@ -3,7 +3,8 @@ Live Website: https://barakat95.github.io/movie-project-prod/
 
 # Website description
 
-The Movies Data Base is my Angular project displaying in the home component Now-Playing movies in cinemas
+The Movies Data Base is my Angular project displaying in the home component Now-Playing movies at cinemas in header section with slider and displaying more than one category throw all the home page.
+There are other tabs [Movies, TV, Actors, Login and Register] and you could search on specific movie or tv in their tabs.
 
 # Project technical description
 
